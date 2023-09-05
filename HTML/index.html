@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/main-style.css">
+
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
+        type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="container container-header">
+            <div class="logo-container border-white">
+                <div class="logo">
+                    <img href="index.html" src="/img/amazon_logo.png" alt="">
+                </div>
+                <span class="dotin">.in</span>
+            </div>
+
+            <div class="address-container border-white">
+                <p class="hello">Hello</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p>Select your address</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">All</button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#" onclick="selectItem('All Categories')">All Categories</a>
+                        <a href="#" onclick="selectItem('Alexa Skills')">Alexa Skills</a>
+                        <a href="#" onclick="selectItem('Amazon Devices')">Amazon Devices</a>
+                        <a href="#" onclick="selectItem('Amazon Fashion')">Amazon Fashion</a>
+                        <a href="#" onclick="selectItem('Amazon Fresh')">Amazon Fresh</a>
+                        <a href="#" onclick="selectItem('Amazon Pharmacy')">Amazon Pharmacy</a>
+                        <a href="#" onclick="selectItem('Appliances')">Appliances</a>
+                        <a href="#" onclick="selectItem('Apps & Games')">Apps & Games</a>
+                        <a href="#" onclick="selectItem('Audible Audiobooks')">Audible Audiobooks</a>
+                        <a href="#" onclick="selectItem('Baby')">Baby</a>
+                        <a href="#" onclick="selectItem('Beauty')">Beauty</a>
+                        <a href="#" onclick="selectItem('Books')">Books</a>
+                        <a href="#" onclick="selectItem('Car & Motorbike')">Car & Motorbike</a>
+                        <a href="#" onclick="selectItem('Clothing & Accessories')">Clothing & Accessories</a>
+                        <a href="#" onclick="selectItem('Collectibles')">Collectibles</a>
+                        <a href="#" onclick="selectItem('Computers & Accessories')">Computers & Accessories</a>
+                        <a href="#" onclick="selectItem('Electronics')">Electronics</a>
+                        <a href="#" onclick="selectItem('Furniture')">Furniture</a>
+                        <a href="#" onclick="selectItem('Garden & Outdoors')">Garden & Outdoors</a>
+                        <a href="#" onclick="selectItem('Gift Cards')">Gift Cards</a>
+                        <a href="#" onclick="selectItem('Grocery & Gourmet Foods')">Grocery & Gourmet Foods</a>
+                        <a href="#" onclick="selectItem('Health & Personal Care')">Health & Personal Care</a>
+                        <a href="#" onclick="selectItem('Home & Kitchen')">Home & Kitchen</a>
+                        <a href="#" onclick="selectItem('Industrial & Scientific')">Industrial & Scientific</a>
+                        <a href="#" onclick="selectItem('Jewellery')">Jewellery</a>
+                        <a href="#" onclick="selectItem('Kindle Store')">Kindle Store</a>
+                        <a href="#" onclick="selectItem('Luggage & Bags')">Luggage & Bags</a>
+                        <a href="#" onclick="selectItem('Luxury Beauty')">Luxury Beauty</a>
+                        <a href="#" onclick="selectItem('Movies & TV Shows')">Movies & TV Shows</a>
+                        <a href="#" onclick="selectItem('Music')">Music</a>
+                        <a href="#" onclick="selectItem('Musical Instruments')">Musical Instruments</a>
+                        <a href="#" onclick="selectItem('Prime Video')">Prime Video</a>
+                        <a href="#" onclick="selectItem('Shoes & Handbags')">Shoes & Handbags</a>
+                    </div>
+                </div>
+
+                <div id="selectedItem"></div>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search Amazon.in" />
+                <div class="search-icon" onclick="focusSearchInput()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="language-container border-white">
+                <div class="languge-image">
+                    <img
+                        src="https://media.istockphoto.com/vectors/vector-flag-of-the-republic-of-india-proportion-23-the-national-flag-vector-id1051236720?k=20&m=1051236720&s=612x612&w=0&h=ATObRTHmTosADa9zaB2dQPn_VAQmG1XYH2x92kzc304=" />
+                </div>
+                <p>EN</p><i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="language-dropdown-container">
+                <ul>
+                    <li><input type="radio" id="en" name="fav_language" value="English - EN">
+                        <label for="en">English - EN</label>
+                    </li>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <li><input type="radio" id="hin" name="fav_language" value="हिन्दी - HI">
+                        <label for="hin">हिन्दी - HI</label>
+                    </li>
+                    <li><input type="radio" id="ta" name="fav_language" value="தமிழ் - TA">
+                        <label for="ta">தமிழ் - TA</label>
+                    </li>
+                    <li><input type="radio" id="kn" name="fav_language" value="ಕನ್ನಡ - KN">
+                        <label for="kn">ಕನ್ನಡ - KN
+                        </label>
+                    </li>
+                    <li><input type="radio" id="mr" name="fav_language" value="मराठी - MR">
+                        <label for="mr">मराठी - MR</label>
+                    </li>
+                </ul>
+                <a href="">Learn more</a>
+            </div>
+
+            <div class="login-container border-white">
+                <p class="sign">Hello,<span>sign in</span></p>
+                <p class="account">Account & Lists <i class="fa-solid fa-caret-down"></i> </p>
+            </div>
+            <div class="signin-container">
+                <div class="signin-heading">
+                    <button>Sign in</button>
+                </div>
+
+
+                <div class="signin-lists-box">
+                    <div class="your-lists">
+                        <h3>Your Lists</h3>
+                        <ul>
+                            <li><a href="">Create a Wish List</a></li>
+                            <li><a href="">Wish from Any Website</a></li>
+                            <li><a href="">Baby Wishlist</a></li>
+                            <li><a href="">Discover Your Style</a></li>
+                            <li><a href="">Explore Showroom</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="your-account">
+                        <h3>Your Account</h3>
+                        <ul>
+                            <li><a href="">Your Account</a></li>
+                            <li><a href="">Your Orders</a></li>
+                            <li><a href="">Your Wishlist</a></li>
+                            <li><a href="">Your Recommendations</a></li>
+                            <li><a href="">Your Prime Membership</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="return-order-container border-white">
+                <p class="return">Returns</p>
+                <p class="order">& Orders</p>
+            </div>
+
+
+            <div class="cart-container border-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-container">
+        <div class="container-nav">
+            <div class="list-items2">
+                <ul>
+                    <li class="border-white" id="open-nav-sidebar">
+                        <span class="open-nav-slider">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>All</p>
+                        </span>
+                    </li>
+                    <li class="border-white"><a href="#">Amazon miniTV</a></li>
+                    <li class="border-white"><a href="#">Sell</a></li>
+                    <li class="border-white"><a href="#">Best Sellers</a></li>
+                    <li class="border-white"><a href="#">Today's Deals</a></li>
+                    <li class="border-white"><a href="#">Mobile</a></li>
+                    <li class="border-white"><a href="#">Home & Kitchen</a></li>
+                    <li class="border-white"><a href="#">Fashion</a></li>
+                    <li class="border-white prime-image-hover">
+                        <a href="#">Prime <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="prime-image">
+                            <img
+                                src="https://m.media-amazon.com/images/G/31/prime/NavFlyout/TryPrime/2018/Apr/IN-Prime-PIN-TryPrime-MultiBen-Apr18-400x400._CB442254244_.jpg" />
+                        </div>
+
+                    </li>
+                    <li class="border-white"><a href="#">Books</a></li>
+                    <li class="border-white"><a href="#">Coupons</a></li>
+                    <li class="border-white"><a href="#">New Releases</a></li>
+                    <li class="border-white"><a href="#">Gift Ideas</a></li>
+                    <li class="border-white"><a href="#">Amazon Pay</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-side-nav-container" id="side-menu">
+        <span id="close-menu-button" class="close-button">
+            <i class="fa-solid fa-times"></i>
+        </span>
+        <div class="profile">
+            <h3> <i class="fa-solid fa-user"></i> Hello, sign in</h3>
+        </div>
+
+        <div class="menu-content">
+            <div class="main-ul">
+                <ul>
+                    <li>
+                        <div class="menu-title">
+                            Trending
+                        </div>
+                    </li>
+                    <li><a href="">Best Sellers</a></li>
+                    <li><a href="">New Releases</a></li>
+                    <li><a href="">Movers and Shakers</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Digital Content And Devices
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" id="echo-alexa-link">
+                            <div>Echo & Alexa <i class="fa-solid fa-chevron-right"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="fire-tv-link">
+                            <div> Fire TV <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="kindle-link">
+                            <div> Kindle E-Readers & eBooks <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <li class="audiobooks">
+                        <a href="">
+                            <div> Audible Audiobooks <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <li class="audiobooks">
+                        <a href="">
+                            <div> Amazon Prime Video <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Shop By Category
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" id="mobile-link">
+                            <div> Mobile, Computers <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="men-link">
+                            <div> Men's Fashion <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="women-link">
+                            <div> Women's Fashion <i class="fa-solid fa-chevron-right"></i> </div>
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Help & Settings
+                        </div>
+                    </li>
+                    <li><a href="">Your Account</a></li>
+                    <li><a href="">Customer Service</a></li>
+                    <li><a href="">Sign in</a></li>
+                </ul>
+            </div>
+
+            <div class="echo-alexa-ul" id="echo-alexa-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Echo & Alexa
+                        </div>
+                    </li>
+                    <li><a href="">All-new Echo Dot (4th Gen)</a></li>
+                    <li><a href="">Echo Dot (3rd Gen)</a></li>
+                    <li><a href="">Echo Show 8</a></li>
+                    <li><a href="">All-new Echo (4th Gen)</a></li>
+                    <li><a href="">Echo Show 5</a></li>
+                    <li><a href="">Echo Studio</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Content & Resources
+                        </div>
+                    </li>
+                    <li><a href="">meet alexa</a></li>
+                    <li><a href="">alexa skills</a></li>
+                    <li><a href="">alexa app</a></li>
+                    <li><a href="">alexa smart home</a></li>
+                    <li><a href="">amazon prime music</a></li>
+                </ul>
+            </div>
+
+            <div class="fire-tv-ul" id="fire-tv-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link2">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Fire TV
+                        </div>
+                    </li>
+                    <li><a href="">Introducing: Fire TV Stick Lite</a></li>
+                    <li><a href="">all-new fire TV stick (3rd Gen)</a></li>
+                    <li><a href="">fire TV stick 4k</a></li>
+                    <li><a href="">fire TV cube</a></li>
+                    <li><a href="">amazon prime video</a></li>
+                    <li><a href="">fire TV apps & games</a></li>
+                </ul>
+            </div>
+
+            <div class="kindle-ul" id="kindle-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link3">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Kindle E-Readers
+                        </div>
+                    </li>
+                    <li><a href="">All-new kindle</a></li>
+                    <li><a href="">all-new kindle paperwhite</a></li>
+                    <li><a href="">kindle paperwhite starter pack</a></li>
+                    <li><a href="">all-new kindle oasis</a></li>
+                    <li><a href="">refurbished & open box</a></li>
+                    <li><a href="">kindle- e-reader Accessories</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            kindle Ebooks
+                        </div>
+                    </li>
+                    <li><a href="">all kindle ebooks</a></li>
+                    <li><a href="">prime reading</a></li>
+                    <li><a href="">kindle unlimited</a></li>
+                    <li><a href="">deals on kindle ebooks</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-ul" id="mobile-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link4">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Mobiles, Tablets & More
+                        </div>
+                    </li>
+                    <li><a href="">all mobile phones</a></li>
+                    <li><a href="">all mobile Accessories</a></li>
+                    <li><a href="">cases & covers</a></li>
+                    <li><a href="">screen protector</a></li>
+                    <li><a href="">power banks</a></li>
+                    <li><a href="">tablets</a></li>
+                    <li><a href="">software</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Computer & Accessories
+                        </div>
+                    </li>
+                    <li><a href="">all computers & Accessories</a></li>
+                    <li><a href="">laptops</a></li>
+                    <li><a href="">drives & storage</a></li>
+                    <li><a href="">printers & ink</a></li>
+                    <li><a href="">game zone</a></li>
+                    <li><a href="">monitors</a></li>
+                    <li><a href="">desktops</a></li>
+                    <li><a href="">components</a></li>
+                </ul>
+            </div>
+
+            <div class="men-ul" id="men-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link5">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Men's Clothing
+                        </div>
+                    </li>
+                    <li><a href="">clothing</a></li>
+                    <li><a href="">t-shirts & polos</a></li>
+                    <li><a href="">shirts</a></li>
+                    <li><a href="">jeans</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Accessories
+                        </div>
+                    </li>
+                    <li><a href="">Watches</a></li>
+                    <li><a href="">bags & Luggage</a></li>
+                    <li><a href="">sunglasses</a></li>
+                    <li><a href="">Jewellery</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Men's Shoes
+                        </div>
+                    </li>
+                    <li><a href="">sports shoes</a></li>
+                    <li><a href="">formal shoes</a></li>
+                    <li><a href="">casual shoes</a></li>
+                </ul>
+            </div>
+
+            <div class="women-ul" id="women-submenu">
+                <ul>
+                    <li>
+                        <div class="menu-title2" id="main-menu-link6">
+                            <i class="fa-solid fa-arrow-left"></i>MAIN MENU
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="menu-title">
+                            Women's Clothing
+                        </div>
+                    </li>
+                    <li><a href="">clothing</a></li>
+                    <li><a href="">western wear</a></li>
+                    <li><a href="">ethenic wear</a></li>
+                    <li><a href="">top brands</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Accessories
+                        </div>
+                    </li>
+                    <li><a href="">Watches</a></li>
+                    <li><a href="">handbags & clutches</a></li>
+                    <li><a href="">gold & diamond Jewellery</a></li>
+                    <li><a href="">sunglasses</a></li>
+                    <hr>
+                    <li>
+                        <div class="menu-title">
+                            Women's Shoes
+                        </div>
+                    </li>
+                    <li><a href="">shoes</a></li>
+                    <li><a href="">fashion sandals</a></li>
+                    <li><a href="">ballerinas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+
+
+
+    <!-- MAIN CONTENT STARTS HERE -->
+
+    <!--image slider -->
+    <section>
+        <div class="image-container">
+            <div class="image-list">
+                <div class="image-item">
+                    <img src="/img/slider-images/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg"
+                        alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/Deals-Unrec-PC-3000_2._CB598748121_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/KA_3000._CB595840558_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/PC_Unrec_Hero2x._CB595770532_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/Shoes_3000._CB595761837_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg"
+                        alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/Skincare-Herofader-PCr._CB595798821_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="/img/slider-images/Haircare-Herofader-PC._CB595728759_.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="image-btn-container">
+                <button class="slider-btn" id="slide-btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn" id="slide-btn-right"><i class="fa-solid fa-chevron-right"></i></i></button>
+            </div>
+        </div>
+    </section>
+    <!--image slider -->
+
+
+
+    <!-- MAIN CONTENT ENDS HERE -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="top-button">
+            <a href="#header"><button>Back to top</button></a>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="know-us">
+                    <ul>
+                        <li>
+                            <div class="footer-menu-title">
+                                get to know us
+                            </div>
+                        </li>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">carrers</a></li>
+                        <li><a href="">press Releases</a></li>
+                        <li><a href="">amazon science</a></li>
+                    </ul>
+                </div>
+
+                <div class="connect">
+                    <ul>
+                        <li>
+                            <div class="footer-menu-title">
+                                connect with us
+                            </div>
+                        </li>
+                        <li><a href="">facebook</a></li>
+                        <li><a href="">twitter</a></li>
+                        <li><a href="">instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="money-with-us">
+                    <ul>
+                        <li>
+                            <div class="footer-menu-title">
+                                make money with us
+                            </div>
+                        </li>
+                        <li><a href="">sell on amazon</a></li>
+                        <li><a href="">sell under amazon accelator</a></li>
+                        <li><a href="">protect and build your brand</a></li>
+                        <li><a href="">become an affiliate</a></li>
+                    </ul>
+                </div>
+
+                <div class="help">
+                    <ul>
+                        <li>
+                            <div class="footer-menu-title">
+                                let us help you
+                            </div>
+                        </li>
+                        <li><a href="">COVID-19 and amazon</a></li>
+                        <li><a href="">your account</a></li>
+                        <li><a href="">returns center</a></li>
+                        <li><a href="">help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-footer">
+            <ul>
+                <li>Your amazon.in</li>
+                <li>amazon pay</li>
+                <li>wish list</li>
+                <li>your account</li>
+                <li>returns</li>
+            </ul>
+
+            <ul>
+                <li>your order</li>
+                <li>amazon app download</li>
+                <li>find a wish list</li>
+                <li>sell</li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <ul>
+                <li><a href="">conditions of use & sale</a></li>
+                <li><a href="">privacy notice</a></li>
+                <li><a href="">interest based ads</a></li>
+            </ul>
+            <p>&copy; 1996-2023, amazon.com, inc. or its affiliates</p>
+            <h3><a href="">Made by Tarundeep Joshi</a></h3>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>
