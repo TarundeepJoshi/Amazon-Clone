@@ -217,3 +217,40 @@ function renderSlideAuto() {
     }
 }
 setInterval(renderSlideAuto, 4000);
+
+
+// ITEMS SLIDER COLUMN// Function to initialize a carousel container
+function initializeCarousel(containerClass) {
+    const container = document.querySelector(`.${containerClass}`);
+    const carousel = container.querySelector('.carousel');
+    const prevButton = container.querySelector('.prev-button');
+    const nextButton = container.querySelector('.next-button');
+
+    // Adjust the scroll position when the next button is clicked
+    nextButton.addEventListener('click', () => {
+        const scrollAmount = container.offsetWidth;
+        carousel.scrollLeft += scrollAmount;
+
+        // Check if we have reached the end
+        if (carousel.scrollLeft + container.offsetWidth >= carousel.scrollWidth) {
+            // Stop further scrolling
+            carousel.scrollLeft = carousel.scrollWidth - container.offsetWidth;
+        }
+    });
+
+    // Adjust the scroll position when the prev button is clicked
+    prevButton.addEventListener('click', () => {
+        const scrollAmount = container.offsetWidth;
+        carousel.scrollLeft -= scrollAmount;
+
+        // Check if we have reached the beginning
+        if (carousel.scrollLeft <= 0) {
+            // Stop further scrolling
+            carousel.scrollLeft = 0;
+        }
+    });
+}
+
+// Initialize both carousel containers
+initializeCarousel('today-deals-container');
+initializeCarousel('computer-accessories-container');
