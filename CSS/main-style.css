@@ -1674,3 +1674,251 @@ footer {
         transform: translateY(-10%);
     }
 }
+
+/* FIRST-GRID-COLUMN  */
+.third-grid-column {
+    position: relative;
+    transform: translateY(-40%);
+
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.first-grid {
+    width: 320px;
+    height: 390px;
+    color: #0f1111;
+    background-color: #ffffff;
+    border: 1px solid rgb(202, 202, 202);
+
+    padding: 20px 20px;
+}
+
+.first-grid-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.first-grid-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.first-grid-item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+.first-grid h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.first-grid-item p {
+    font-size: 15px;
+}
+
+.first-grid-item-image img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.first-grid-item:hover .first-grid-item-image img {
+    transform: scale(1.05);
+}
+
+.second-grid-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.second-grid {
+    width: 320px;
+    height: 390px;
+    color: #0f1111;
+    background-color: #ffffff;
+    border: 1px solid rgb(202, 202, 202);
+
+    padding: 20px 20px;
+}
+
+.second-grid-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.second-grid-item img {
+    width: 120px;
+    height: 115px;
+}
+
+.second-grid h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.second-grid-item p {
+    font-size: 13px;
+}
+
+.second-grid-item-image img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.second-grid-item:hover .second-grid-item-image img {
+    transform: scale(1.05);
+}
+
+.third-grid {
+    width: 320px;
+    height: 150px;
+    color: #0f1111;
+    background-color: #ffffff;
+    border: 1px solid rgb(202, 202, 202);
+
+    padding: 20px 20px;
+}
+
+.third-grid-details {
+    float: left;
+    margin-right: 1rem;
+}
+
+.third-grid-details h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.third-grid-details a {
+    text-decoration: none;
+    color: blue;
+    font-size: 14px;
+}
+
+.third-grid-details a:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+.third-grid img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+
+    .first-grid,
+    #third-grid {
+        display: none;
+    }
+
+    .third-grid-column {
+        transform: translateY(0%);
+        grid-template-columns: 1fr;
+    }
+
+    .second-grid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .second-grid-item img {
+        width: 100px;
+        height: 105px;
+    }
+
+    .second-grid h2 {
+        font-size: 1rem;
+    }
+
+    .second-grid-item p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 749px) {
+
+    .first-grid,
+    .third-grid {
+        display: none;
+    }
+
+    .third-grid-column {
+        transform: translateY(-10%);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .second-grid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .second-grid-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .second-grid h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+    .third-grid-column {
+        transform: translateY(-25%);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .first-grid,
+    .second-grid {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1020px) and (max-width: 1320px) {
+    .third-grid-column {
+        transform: translateY(-2%);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .third-grid {
+        display: none;
+    }
+
+    .first-grid,
+    .second-grid {
+        margin-bottom: 1rem;
+    }
+
+    .list-items2 li a {
+        font-size: 0.7rem;
+    }
+
+    .list-items2 li p {
+        font-size: 0.7rem;
+    }
+
+    .language-dropdown-container {
+        top: 8.5%;
+        left: 63%;
+    }
+
+    .language-dropdown-container {
+        width: 152px;
+        height: 192px;
+    }
+}
