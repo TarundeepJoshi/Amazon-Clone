@@ -1,3 +1,3 @@
 # Amazon-Clone
 
-Live:- 
+Live:- https://amazon-clone-tau-ten.vercel.app/HTML
